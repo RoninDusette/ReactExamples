@@ -1,22 +1,19 @@
 import React, {Component} from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
+import MyAccountInfo from "./views/MyAccountInfo.jsx";
+import ShoppingList from "./views/ShoppingList.jsx";
+import Wattup from "./views/Wattup.jsx";
 
 
 class App extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: true,
-            currentPage: ''
-        };
-    }
-
     render() {
         return (
-            <div>
-                <h1>Loading: {this.loading}</h1>
-            </div>
+            <Switch>
+                <Route path="/my-account-info" component={MyAccountInfo} />
+                <Route path="/shopping-list" component={ShoppingList} />
+                <Route path="/wattup" component={Wattup} />
+            </Switch>
         )
     }
 }
