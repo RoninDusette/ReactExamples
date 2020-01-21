@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-class MyAccountInfo extends Component {
+export default class MyAccountInfo extends Component {
     render() {
         return(
             <div>
@@ -14,5 +14,3 @@ class MyAccountInfo extends Component {
         )
     }
 }
-
-export default MyAccountInfo;

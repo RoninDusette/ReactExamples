@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
 
-class ShoppingList extends Component {
+export default class ShoppingList extends Component {
     render() {
         return(
             <div>
@@ -14,5 +14,3 @@ class ShoppingList extends Component {
         )
     }
 }
-
-export default ShoppingList;
