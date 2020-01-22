@@ -1,15 +1,33 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 class Nav extends Component {
     render() {
         return (
-            <div className="navbar">
-                <ul>
-                    <li><Link to="/my-account-info">My Account Info</Link></li>
-                    <li><Link to="/shopping-list">Shopping List</Link></li>
-                    <li><Link to="/wattup">Wattup</Link></li>
+            <div className="nav-bar">
+                <ul className="list-unstyled list-inline can-haz-navbehr">
+                    <li>
+                        <NavLink to="/my-account-info"
+                                 className="nav-link"
+                        >
+                            My Account Info
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/shopping-list"
+                                 className="nav-link"
+                        >
+                            Shopping List
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/wattup"
+                                 className="nav-link"
+                        >
+                            Wattup
+                        </NavLink>
+                    </li>
                 </ul>
             </div>
         );

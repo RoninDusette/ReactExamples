@@ -17,6 +17,6 @@ class ItemSerializer(serializers.HyperlinkedModelSerializer):
         model = Item
         fields = [
             'list',
-            'name'
+            'name',
             'price',
         ]

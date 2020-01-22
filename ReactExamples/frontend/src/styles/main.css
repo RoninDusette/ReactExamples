@@ -1,0 +1,25 @@
+/* Navbar */
+
+.nav-bar {
+    min-height: 20%;
+    width: 100%;
+}
+
+.can-haz-navbehr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 7vh;
+    background-color: darkred;
+    transition: all .5s ease;
+}
+
+.can-haz-navbehr a {
+    color: white;
+    text-decoration: none;
+    transition: color .5s ease;
+}
+
+.can-haz-navbehr a:hover {
+    color: navajowhite;
+}
