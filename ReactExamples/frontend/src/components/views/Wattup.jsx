@@ -56,6 +56,10 @@ class Wattup extends React.Component {
         return(
             <div>
                 <h1>Contact</h1>
+                <br/>
+                {this.state.latestMessages.map((message) => (
+                    <h1>{message.full_name}</h1>
+                ))}
             </div>
         )
     }

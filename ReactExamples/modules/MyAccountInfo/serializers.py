@@ -10,5 +10,4 @@ class AccountSerializer(serializers.HyperlinkedModelSerializer):
             'last_name',
             'email_address',
             'daily_driver',
-            'gender',
         ]

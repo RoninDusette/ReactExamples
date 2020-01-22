@@ -5,30 +5,16 @@ import {NavLink} from 'react-router-dom';
 class Nav extends Component {
     render() {
         return (
-            <div className="nav-bar">
-                <ul className="list-unstyled list-inline can-haz-navbehr">
-                    <li>
+            <div id="id_nav-bar" className="container-fluid my-0 px-0 nav-bar">
+                <div className="row can-haz-navbehr">
+                    <div className="col-xs-12 col-md-4 text-center">
                         <NavLink to="/my-account-info"
                                  className="nav-link"
                         >
                             My Account Info
                         </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/shopping-list"
-                                 className="nav-link"
-                        >
-                            Shopping List
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/wattup"
-                                 className="nav-link"
-                        >
-                            Wattup
-                        </NavLink>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         );
     }
