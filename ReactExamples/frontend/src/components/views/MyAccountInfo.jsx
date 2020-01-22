@@ -6,12 +6,14 @@ class MyAccountInfo extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            baseUrl: 'http://127.0.0.1:8000',
+            endpoint: '/account/1/',
             accountInfo: []
         };
     }
 
-    async getAccountInfo () {
-        const response = await fetch('http://127.0.0.1:8000/account/1/');
+    async handleGetAccountInfo () {
+        const response = await fetch(this.state.baseUrl + this.state.endpoint);
         const json = await response.json();
         await this.setState({
             accountInfo: json
@@ -19,7 +21,7 @@ class MyAccountInfo extends Component {
     }
 
     componentDidMount () {
-        this.getAccountInfo();
+        this.handleGetAccountInfo();
     }
 
     render() {
