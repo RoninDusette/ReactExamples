@@ -1,13 +1,52 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
 
 
-export default class MyAccountInfo extends Component {
+class MyAccountInfo extends Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            accountInfo: []
+        };
+    }
+
+    async getAccountInfo () {
+        const response = await fetch('http://127.0.0.1:8000/account/1/');
+        const json = await response.json();
+        await this.setState({
+            accountInfo: json
+        });
+    }
+
+    componentDidMount () {
+        this.getAccountInfo();
+    }
+
     render() {
         return(
             <div>
                 <h1>My Account Info</h1>
+                <br/>
+                <ul>
+                    <li>
+                        First name: {this.state.accountInfo.first_name}
+                    </li>
+                    <li>
+                        Last name: {this.state.accountInfo.last_name}
+                    </li>
+                    <li>
+                        Email: {this.state.accountInfo.email_address}
+                    </li>
+                    <li>
+                        Daily driver: {this.state.accountInfo.daily_driver}
+                    </li>
+                    <li>
+                        Gender: {this.state.accountInfo.gender}
+                    </li>
+                </ul>
             </div>
         )
     }
 }
+
+export default MyAccountInfo;

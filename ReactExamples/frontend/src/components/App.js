@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import '../styles/main.css';
 import Nav from './views/Nav.jsx';
 import Home from './views/Home.jsx';
 import MyAccountInfo from './views/MyAccountInfo.jsx';
